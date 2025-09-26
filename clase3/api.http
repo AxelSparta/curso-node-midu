@@ -1,0 +1,23 @@
+### Recuperar todas las películas
+GET http://localhost:8080/movies
+
+### Recuperar una película por ID
+GET http://localhost:8080/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+### Recuperar todas las películas por un género
+GET http://localhost:8080/movies?genre=Action
+
+### Crear una película
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": [
+        "Action"
+    ]
+}
