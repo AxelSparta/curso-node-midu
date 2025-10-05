@@ -1,0 +1,37 @@
+### Recuperar todas las películas
+GET http://localhost:8080/movies
+
+### Recuperar una película por ID
+GET http://localhost:8080/movies/9010eb4a-518b-46fc-8764-de2eb1b64465
+
+### Recuperar todas las películas por un género
+GET http://localhost:8080/movies?genre=adventure
+
+### Crear una película
+POST http://localhost:8080/movies
+Content-Type: application/json
+
+{
+    "title": "The Matrix",
+    "year": 1999,
+    "director": "Lana Wachowski",
+    "duration": 136,
+    "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
+    "genre": [
+        "Action",
+        "Adventure"
+    ],
+    "rate": 8.7
+}
+
+### Actualizar una película
+PATCH http://localhost:8080/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "title": "The Shawshank Redemption - Updated",
+    "year": 1995
+}
+
+### Eliminar una película
+DELETE http://localhost:8080/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
