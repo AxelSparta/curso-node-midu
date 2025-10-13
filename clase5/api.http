@@ -2,10 +2,10 @@
 GET http://localhost:8080/movies
 
 ### Recuperar una película por ID
-GET http://localhost:8080/movies/9010eb4a-518b-46fc-8764-de2eb1b64465
+GET http://localhost:8080/movies/45988834-ae26-48fb-b005-cd4f9a590e10
 
 ### Recuperar todas las películas por un género
-GET http://localhost:8080/movies?genre=adventure
+GET http://localhost:8080/movies?genre=action
 
 ### Crear una película
 POST http://localhost:8080/movies
@@ -18,20 +18,24 @@ Content-Type: application/json
     "duration": 136,
     "poster": "https://i.ebayimg.com/images/g/QFQAAOSwAQpfjaA6/s-l1200.jpg",
     "genre": [
-        "Action",
+        "Drama",
         "Adventure"
     ],
     "rate": 8.7
 }
 
 ### Actualizar una película
-PATCH http://localhost:8080/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH http://localhost:8080/movies/4e7a3b5a-035d-4392-abee-532bcac6d792
 Content-Type: application/json
 
 {
-    "title": "The Shawshank Redemption - Updated",
-    "year": 1995
+    "title": "The Matrix Reloaded",
+    "year": 2003,
+    "genre": [
+        "Action",
+        "Adventure"
+    ]
 }
 
 ### Eliminar una película
-DELETE http://localhost:8080/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+DELETE http://localhost:8080/movies/a86c9b91-f153-4ba6-a0ea-c0206155d9f0
